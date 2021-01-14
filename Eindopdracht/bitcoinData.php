@@ -36,7 +36,7 @@ echo $buttons[0];
 
 function calculateBitcoinAmount()
 {
-    if (isset($_GET['euro'])) {
+    if (isset($_GET['euro'])) { //Gebruik je om èèn of meerdere waardes te vergelijken
         $euro = (int)$_GET['euro']; //Dit blokje code (if-statement) kun je laten staan.
     }
 
@@ -86,7 +86,7 @@ if (isset($_GET['euro'])) {
      * Je voegt een bitcoinprijs toe, de prijs in euro's en het aantal gekochte bitcoins.
      */
     array_push($transactions, [getBitcoinPrice(), $euro, calculateBitcoinAmount() ]);
-
+ // De push methode rekent op een length eigenschap om te kunnen weten waar de nieuwe waardes toegevoegd moeten worden
 
 
 }
